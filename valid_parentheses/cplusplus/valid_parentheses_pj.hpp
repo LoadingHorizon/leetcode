@@ -6,7 +6,7 @@ class Solution {
 public:
     bool isValid(string s) {
         stack<char> left;
-        map<char, char> m= {{'(', ')'}, {'[', ']'}, {'{', '}'}};
+        const static map<char, char> m= {{'(', ')'}, {'[', ']'}, {'{', '}'}};
         
         for (int i = 0; i < s.length(); ++ i) {
             if (s[i] == '(' || s[i] == '[' || s[i] == '{') {
@@ -19,10 +19,7 @@ public:
                 }
             }
         }
-        if (left.empty()) {
-            return true;
-        }
         
-        return false;
+        return left.empty();
     }
 };
