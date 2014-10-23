@@ -1,6 +1,14 @@
 #include <cassert>
 #include "add_two_numbers.h"
 
+void clear_list(ListNode* list) {
+    while (list != nullptr) {
+        auto temp = list;
+        list = list->next;
+        delete temp;
+    }
+}
+
 class TestSolution {
 public:
     static void test1() {
@@ -17,6 +25,9 @@ public:
         assert(list->val == 7);
         assert(list->next->val == 0);
         assert(list->next->next->val == 8);
+
+        clear_list(list1);
+        clear_list(list2);
     }
     static void test2() {
         ListNode* list1 = new ListNode(1);
@@ -28,6 +39,9 @@ public:
 
         assert(list->val == 1);
         assert(list->next->val == 8);
+
+        clear_list(list1);
+        clear_list(list2);
     }
 
 private:
