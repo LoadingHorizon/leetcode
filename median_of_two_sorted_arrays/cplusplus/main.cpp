@@ -1,5 +1,5 @@
+#include <cassert>
 #include "median_of_two_sorted_arrays.h"
-#include <iostream>
 
 bool double_equal(double d1, double d2)
 {
