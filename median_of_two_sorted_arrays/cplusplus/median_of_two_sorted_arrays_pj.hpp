@@ -1,4 +1,6 @@
 // 二分查找
+# include <algorithm>
+
 class Solution {
 public:
     double findMedianSortedArrays(int A[], int m, int B[], int n) {
@@ -22,7 +24,7 @@ public:
             return min(A[0], B[0]);
         }
 
-        double k = 1.0 * kth / (m + n);
+        // double k = 1.0 * kth / (m + n);
         int posA = (m * kth - 1) / (m + n);
         int posB = (n * kth - 1) / (m + n);
 
