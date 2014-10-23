@@ -21,7 +21,7 @@ public:
         }
 
         if (kth == 0) {
-            return min(A[0], B[0]);
+            return std::min(A[0], B[0]);
         }
 
         // double k = 1.0 * kth / (m + n);
