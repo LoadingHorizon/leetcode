@@ -1,0 +1,24 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+PROJECT(LEETCODE_REVERSE_WORDS_IN_A_STRING)
+
+SET(CMAKE_VERBOSE_MAKEFILE OFF)
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+SET(CMAKE_CXX_FLAGS "-g -pipe -W -Wall -fPIC -std=c++11")
+
+INCLUDE_DIRECTORIES(
+    "."
+)
+
+LINK_DIRECTORIES(
+)
+
+IF (class STREQUAL hl)
+    ADD_DEFINITIONS(-DHL=1)
+    SET(SRC_LIST main.cpp reverse_words_in_a_string_hl.hpp)
+ENDIF()
+IF (class STREQUAL pj)
+    ADD_DEFINITIONS(-DPJ=1)
+    SET(SRC_LIST main.cpp reverse_words_in_a_string_pj.hpp)
+ENDIF()
+
+ADD_EXECUTABLE(reverse_words_in_a_string ${SRC_LIST})
