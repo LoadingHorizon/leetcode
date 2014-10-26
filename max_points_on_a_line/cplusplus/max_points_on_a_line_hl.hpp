@@ -4,6 +4,8 @@
 // @date 2014-10-26
 // @desc 思路：将在同一直线上的点放到一个集合中
 
+#pragma once
+
 #include <cfloat>
 #include <vector>
 #include <unordered_map>
