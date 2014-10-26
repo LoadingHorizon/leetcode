@@ -58,7 +58,7 @@ public:
         //  points: [<1, 1>, <4, 5>, <4, 5>, <6, 3>, <1, 1>]
         //  points_without_repeat: [<1, 1>, <4, 5>, <6, 3>]
         //  point_times_map: {<1, 1>: 2, <4, 5>: 2, <6, 3>: 1}
-        //  point_times: [2, 3, 1]
+        //  point_times: [2, 2, 1]
         // 点出现次数
         // 不重复点的集合
         std::vector<Point> points_without_repeat;
