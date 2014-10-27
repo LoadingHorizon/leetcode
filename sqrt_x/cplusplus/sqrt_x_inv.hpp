@@ -15,13 +15,13 @@ float InvSqrt (float x){
     i = 0x5f375a86 - (i >> 1);
     x = *(float*)&i;
     x = x * (1.5f - xhalf * x * x);
-    return 1 / x;
+    return x;
 }
 
 class Solution {
 public:
     int sqrt(int x) {
-        int64_t ret = static_cast<int64_t>(InvSqrt(static_cast<float>(x)));
+        int64_t ret = static_cast<int64_t>(1.0 / InvSqrt(static_cast<float>(x)));
         // InvSqrt计算的是一个近似值，有一点误差
         while ((ret * ret) < x) {
             ret++;
