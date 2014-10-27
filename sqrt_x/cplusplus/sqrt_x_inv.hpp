@@ -1,6 +1,6 @@
 // @file sqrt_x_inv.hpp
 // @desc 神奇的sqrt实现，在图像处理领域用这种方式实现
-// @auth hele01(hele01@baidu.com)
+// @auth hatlonely(hatlonely@gmail.com)
 // @vers 1.0
 // @date 2014-10-27
 
