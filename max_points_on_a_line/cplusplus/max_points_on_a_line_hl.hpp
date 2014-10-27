@@ -95,9 +95,9 @@ public:
 
         size_t max = 0;
         // 统计每个集合中点的个数，并求出最大
-        for (auto it : line_indexs_map) {
+        for (auto line_indexs : line_indexs_map) {
             size_t count = 0;
-            for (auto index : it.second) {
+            for (auto index : line_indexs.second) {
                 count += point_times[index];
             }
             if (count > max) {
