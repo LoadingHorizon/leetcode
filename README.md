@@ -34,7 +34,9 @@ make
 
 ```bash
 javac Test.java     // 编译主测试程序
-cd pkg && javac Solution   // 编译Solution
+cd pkg
+javac Solution   // 编译Solution
+cd ..
 java -ea Test pkg   // -ea打开assert，pkg为要测试的Solution所在的包
 ```
 
