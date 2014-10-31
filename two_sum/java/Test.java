@@ -8,6 +8,8 @@ public class Test {
         test_case(new Object[]{new int[]{1, 3, 4, 2}, 5}, new int[]{1, 3});
         test_case(new Object[]{new int[]{1, 3, 2, 4}, 5}, new int[]{2, 3});
         test_case(new Object[]{new int[]{1, 2, 3, 4}, 7}, new int[]{3, 4});
+        test_case(new Object[]{new int[]{1, 2, 3, 4}, 8}, new int[]{0, 0});
+        // TODO add your case here
     };
 
     private static void test_case(Object[] args, Object ret) throws Throwable {
@@ -24,7 +26,7 @@ public class Test {
                 str_numbers += (num + ", ");
             }
             str_numbers += "}";
-            System.out.println("test case: ");
+            System.out.println("test case failed: ");
             System.out.println("    numbers: " + str_numbers);
             System.out.println("    target: " + target);
             System.out.println("    expect: {" + expect[0] + ", " + expect[1] + "}");
@@ -47,11 +49,6 @@ public class Test {
             return;
         }
 
-        try {
-            Class solution = Class.forName(args[0] + ".Solution");
-            test(solution);
-        } catch (AssertionError exception) {
-            System.out.println("test case failed.");
-        }
+        test(Class.forName(args[0] + ".Solution"));
     }
 }

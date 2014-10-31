@@ -1,3 +1,10 @@
+// @file Solution.java
+// @desc 把numbers放入一个hashtable中，
+//      查找对于numbers中的数n，只需要判断hashtable中存在target - n
+// @auth hatlonely(hatlonely@gmail.com)
+// @vers 1.0
+// @date 2014-10-31
+
 package hl;
 
 import java.util.Hashtable;
