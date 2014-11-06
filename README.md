@@ -34,9 +34,7 @@ make
 
 ```bash
 javac Test.java     // 编译主测试程序
-cd pkg
-javac Solution   // 编译Solution
-cd ..
+javac pkg/Solution  // 编译Solution
 java -ea Test pkg   // -ea打开assert，pkg为要测试的Solution所在的包
 ```
 
@@ -56,7 +54,7 @@ python test.py name // name为problem_name.py中name后缀
 <https://github.com/LoadingHorizon/lhtools>
 ```bash
 tplmake.py -t leetcpp -q "Two Sum"  // c++模板
-tplmake.py -t leetjava              // java模板
+tplmake.py -t leetjava -f "int[] twoSum(int[] numbers, int target)" // java模板
 ```
 
 ## 官网
