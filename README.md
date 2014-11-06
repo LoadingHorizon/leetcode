@@ -54,7 +54,7 @@ python test.py name // name为problem_name.py中name后缀
 <https://github.com/LoadingHorizon/lhtools>
 ```bash
 tplmake.py -t leetcpp -q "Two Sum"  // c++模板
-tplmake.py -t leetjava              // java模板
+tplmake.py -t leetjava -f "int[] twoSum(int[] numbers, int target)" // java模板
 ```
 
 ## 官网
