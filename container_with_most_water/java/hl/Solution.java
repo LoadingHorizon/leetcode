@@ -16,25 +16,21 @@ public class Solution {
         int idx2 = height.length - 1;
         int h1 = height[idx1];
         int h2 = height[idx2];
-        int max = Math.min(h1, h2) * (idx2 - idx1);
+        int maxArea = Math.min(h1, h2) * (idx2 - idx1);
         while (idx1 < idx2) {
             if (h1 < h2) {
                 while (height[++idx1] < h1 && idx1 < idx2);
                 h1 = height[idx1];
-                int area = Math.min(h1, h2) * (idx2 - idx1);
-                if (max < area) {
-                    max = area;
-                }
             } else {
                 while (height[--idx2] < h2 && idx1 < idx2);
                 h2 = height[idx2];
-                int area = Math.min(h1, h2) * (idx2 - idx1);
-                if (max < area) {
-                    max = area;
-                }
+            }
+            int curArea = Math.min(h1, h2) * (idx2 - idx1);
+            if (maxArea < curArea) {
+                maxArea = curArea;
             }
         }
 
-        return max;
+        return maxArea;
     }
 }
