@@ -1,5 +1,6 @@
 // @file Solution.java
-// @desc
+// @desc 用第一个字符串一次匹配各个字符串
+//      如果匹配失败就去掉最后一个字符
 // @auth hatlonely(hatlonely@gmail.com)
 // @vers 1.0
 // @date 2014-11-08
