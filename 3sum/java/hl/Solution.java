@@ -1,3 +1,10 @@
+// @file Solution.java
+// @desc 先排序，再选一个数num[i]
+//      从剩下的数i+1~length中找到和为-num[i]的两个数
+// @auth hatlonely(hatlonely@gmail.com)
+// @vers 1.0
+// @date 2014-11-08
+
 package hl;
 
 import java.util.List;
@@ -20,16 +27,8 @@ public class Solution {
                 } else if (sortedNums[idx1] + sortedNums[idx2]  + sortedNums[i] > 0) {
                     idx2--;
                 } else {
-                    if (i < idx1) {
-                        result.add(new ArrayList<Integer>(Arrays.asList(
-                                        sortedNums[i], sortedNums[idx1], sortedNums[idx2])));
-                    } else if (i > idx2) {
-                        result.add(new ArrayList<Integer>(Arrays.asList(
-                                        sortedNums[idx1], sortedNums[idx2], sortedNums[i])));
-                    } else {
-                        result.add(new ArrayList<Integer>(Arrays.asList(
-                                        sortedNums[idx1], sortedNums[i], sortedNums[idx2])));
-                    }
+                    result.add(new ArrayList<Integer>(Arrays.asList(
+                                    sortedNums[i], sortedNums[idx1], sortedNums[idx2])));
                     idx1++;
                     idx2--;
                 }
