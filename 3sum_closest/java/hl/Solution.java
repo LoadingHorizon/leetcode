@@ -1,3 +1,9 @@
+// @file Solution.java
+// @desc 和3sum一样的思路
+// @auth hatlonely(hatlonely@gmail.com)
+// @vers 1.0
+// @date 2014-11-09
+
 package hl;
 
 import java.lang.Math;
