@@ -11,7 +11,7 @@ import java.util.Collections;
 
 public class MinStack {
     private Stack<Integer> dataStack_;
-    private int minVal_ = 0;
+    private int minVal_;
 
     public MinStack() {
         dataStack_ = new Stack<Integer>();
